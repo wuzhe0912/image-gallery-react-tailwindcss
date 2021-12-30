@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "initial": "rm -rf yarn.lock && rm -rf node_modules && yarn && yarn dev"
+    "initial": "rm -rf yarn.lock node_modules && yarn && yarn dev"
   },
   "eslintConfig": {
     "extends": [
