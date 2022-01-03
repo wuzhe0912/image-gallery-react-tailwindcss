@@ -8,6 +8,8 @@ function App() {
   const [term, setTerm] = useState('');
 
   useEffect(() => {
+    document.title = 'Image Gallery';
+
     const url = `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`;
     const fetchImages = async () => {
       await fetch(url)
