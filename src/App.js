@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Search from './components/Search';
 import Card from './components/Card';
 
 function App() {
@@ -24,11 +25,25 @@ function App() {
 
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-3 gap-4">
-        {images.map((image) => {
-          return <Card key={image.id} data={image} />;
-        })}
-      </div>
+      <Search searchText={(text) => setTerm(text)} />
+
+      {!isLoading && images.length === 0 && (
+        <h1 className="text-sky-800 text-5xl text-center mx-auto mt-32">
+          No results found.
+        </h1>
+      )}
+
+      {isLoading ? (
+        <h1 className="text-sky-800 text-5xl text-center mx-auto mt-32">
+          Loading...
+        </h1>
+      ) : (
+        <div className="grid grid-cols-3 gap-4">
+          {images.map((image) => {
+            return <Card key={image.id} data={image} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }

@@ -26,14 +26,14 @@ function Card({ data }) {
           </li>
         </ul>
       </div>
-      <div className="px-6 py-4">
+      <div className="flex flex-wrap px-4 py-3">
         {tagsData.map((tag, index) => {
           return (
             <span
               key={index}
-              className="inlin-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semiblod text-gray-700 mr-2"
+              className="inlin-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semiblod text-gray-700 m-1"
             >
-              {tag}
+              # {tag}
             </span>
           );
         })}
