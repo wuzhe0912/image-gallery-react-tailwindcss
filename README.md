@@ -2,7 +2,7 @@
 
 ###### tags: `Demo`
 
-🔗 <a href="https://image-gallery-mo.vercel.app/" target="_blank">Website Url</a>
+🔗 [Website Url](https://image-gallery-mo.vercel.app/)
 
 ## Website View
 
